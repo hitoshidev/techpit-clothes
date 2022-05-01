@@ -13,4 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\ProductController@index')->name('product.index');
+Route::name('product.')
+    ->group(function() {
+        Route::get('/', 'App\Http\Controllers\ProductController@index')->name('index');
+        Route::get('/product/{id}', 'App\Http\Controllers\ProductController@show')->name('show');
+    });
