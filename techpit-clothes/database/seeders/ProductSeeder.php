@@ -15,7 +15,7 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        \DB::table('products')->insert([
+        DB::table('products')->insert([
             [
                 'name' => 'Black T-shirt',
                 'description' => 'コットン素材を使用したクルーネックのカットソー。',
