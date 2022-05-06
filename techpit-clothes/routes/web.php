@@ -27,5 +27,7 @@ Route::name('line_item.')
 Route::name('cart.')
     ->group(function (){
         Route::get('/cart', 'App\Http\Controllers\CartController@index')->name('index');
+        Route::get('/cart/checkout', 'App\Http\Controllers\CartController@checkout')->name('checkout');
+        Route::get('/cart/success', 'App\Http\Controllers\CartController@success')->name('success');
     });
     
